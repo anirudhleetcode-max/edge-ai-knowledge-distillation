@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Central FastAPI client for Edge AI Knowledge Distillation.
  *
  * The frontend talks to the FastAPI backend through this module.
@@ -13,7 +13,7 @@
  */
 
 const configuredBaseUrl =
-  (import.meta.env.VITE_API_BASE_URL as string | undefined)?.trim() || "";
+  (import.meta.env.VITE_API_BASE_URL as string | undefined)?.trim() || "https://edge-ai-knowledge-distillation-5.onrender.com";
 
 export const API_BASE_URL = configuredBaseUrl.replace(/\/+$/, "");
 
