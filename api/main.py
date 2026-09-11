@@ -1,4 +1,4 @@
-"""FastAPI service for the Edge AI model-compression platform.
+﻿"""FastAPI service for the Edge AI model-compression platform.
 
 The service never fabricates ML metrics. Endpoints return measured values only
 when a real artifact and dataset are supplied; otherwise they return an explicit
@@ -15,7 +15,7 @@ from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-from ml_pipeline import (
+from api.ml_pipeline import (
     DEFAULT_STUDENT,
     DEFAULT_TEACHER,
     DistillationConfig,
@@ -216,3 +216,4 @@ async def inspect_dataset(file: UploadFile = File(...)) -> dict:
         raise HTTPException(status_code=400, detail=str(error)) from error
     finally:
         Path(path).unlink(missing_ok=True)
+
