@@ -15,7 +15,7 @@ from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-from api.ml_pipeline import (
+from ml_pipeline import (
     DEFAULT_STUDENT,
     DEFAULT_TEACHER,
     DistillationConfig,
@@ -216,4 +216,5 @@ async def inspect_dataset(file: UploadFile = File(...)) -> dict:
         raise HTTPException(status_code=400, detail=str(error)) from error
     finally:
         Path(path).unlink(missing_ok=True)
+
 
