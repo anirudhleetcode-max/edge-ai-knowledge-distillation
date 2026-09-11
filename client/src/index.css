@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Manrope', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: 0.4rem;
+  --radius-md: 0.65rem;
+  --radius-lg: 0.9rem;
+  --radius-xl: 1.2rem;
+}
+
+:root {
+  --background: oklch(0.06 0.018 250);
+  --foreground: oklch(0.94 0.015 220);
+  --card: oklch(0.105 0.025 248);
+  --card-foreground: oklch(0.94 0.015 220);
+  --popover: oklch(0.12 0.028 248);
+  --popover-foreground: oklch(0.94 0.015 220);
+  --primary: oklch(0.78 0.17 205);
+  --primary-foreground: oklch(0.11 0.03 245);
+  --secondary: oklch(0.16 0.028 245);
+  --secondary-foreground: oklch(0.76 0.02 220);
+  --muted: oklch(0.14 0.025 245);
+  --muted-foreground: oklch(0.58 0.03 230);
+  --accent: oklch(0.78 0.21 135);
+  --accent-foreground: oklch(0.12 0.03 145);
+  --destructive: oklch(0.68 0.19 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.25 0.04 245 / 0.72);
+  --input: oklch(0.25 0.04 245);
+  --ring: oklch(0.78 0.17 205);
+}
+
+* { box-sizing: border-box; }
+html { background: #030712; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #030712;
+  color: #e6edf5;
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button, input, textarea { font: inherit; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visible { outline: 2px solid #49d9ff; outline-offset: 3px; }
+::selection { background: rgba(73, 217, 255, .24); color: #fff; }
+
+.console-bg {
+  min-height: 100vh;
+  background-color: #030712;
+  background-image: linear-gradient(rgba(77, 126, 156, .055) 1px, transparent 1px), linear-gradient(90deg, rgba(77, 126, 156, .055) 1px, transparent 1px), radial-gradient(circle at 78% -10%, rgba(0, 168, 255, .13), transparent 28rem), radial-gradient(circle at 12% 72%, rgba(143, 255, 73, .04), transparent 22rem);
+  background-size: 48px 48px, 48px 48px, auto, auto;
+}
+.glass {
+  background: linear-gradient(135deg, rgba(16, 28, 46, .82), rgba(8, 16, 29, .72));
+  border: 1px solid rgba(86, 126, 157, .22);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, .18), inset 0 1px 0 rgba(255, 255, 255, .025);
+  backdrop-filter: blur(16px);
+}
+.mono { font-family: 'DM Mono', monospace; }
+.metric-glow { text-shadow: 0 0 24px rgba(73, 217, 255, .25); }
+.lime-glow { text-shadow: 0 0 22px rgba(151, 255, 78, .2); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}

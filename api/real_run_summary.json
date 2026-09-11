@@ -1,0 +1,97 @@
+{
+  "dataset": "/home/ubuntu/edge-ai-knowledge-distillation/api/data/sms_spam_uci.csv",
+  "teacher": "mrm8488/bert-tiny-finetuned-sms-spam-detection",
+  "student": "prajjwal1/bert-tiny",
+  "distillation": {
+    "measured": true,
+    "artifactPath": "/home/ubuntu/model_runs/uci_sms_real_run/student",
+    "epochs": 1,
+    "trainRows": 4459,
+    "history": [
+      {
+        "epoch": 1,
+        "total": 0.36442572974732945,
+        "hardCrossEntropy": 0.3764235872243132,
+        "softKLDivergence": 0.35242786992873465
+      }
+    ],
+    "parameterCount": 4386178,
+    "modelSizeMb": 16.73194122314453
+  },
+  "teacherEvaluation": {
+    "measured": true,
+    "sampleCount": 558,
+    "accuracy": 0.9910394265232975,
+    "precision": 0.9861111111111112,
+    "recall": 0.9466666666666667,
+    "f1": 0.9659863945578231,
+    "confusionMatrix": [
+      [
+        482,
+        1
+      ],
+      [
+        4,
+        71
+      ]
+    ]
+  },
+  "studentEvaluation": {
+    "modelPath": "/home/ubuntu/model_runs/uci_sms_real_run/student",
+    "datasetPath": "/home/ubuntu/edge-ai-knowledge-distillation/api/data/sms_spam_uci.csv",
+    "split": "test",
+    "parameters": 4386178,
+    "modelSizeMb": 16.73194122314453,
+    "measured": true,
+    "sampleCount": 558,
+    "accuracy": 0.985663082437276,
+    "precision": 0.9855072463768116,
+    "recall": 0.9066666666666666,
+    "f1": 0.9444444444444444,
+    "confusionMatrix": [
+      [
+        482,
+        1
+      ],
+      [
+        7,
+        68
+      ]
+    ]
+  },
+  "studentBenchmark": {
+    "modelPath": "/home/ubuntu/model_runs/uci_sms_real_run/student",
+    "datasetPath": "/home/ubuntu/edge-ai-knowledge-distillation/api/data/sms_spam_uci.csv",
+    "parameters": 4386178,
+    "modelSizeMb": 16.73194122314453,
+    "measured": true,
+    "sampleCount": 10,
+    "warmupIterations": 3,
+    "medianMs": 2.7866765,
+    "p95Ms": 3.372736,
+    "minMs": 2.3214,
+    "maxMs": 3.372736,
+    "runtime": "cpu"
+  },
+  "quantizedArtifact": {
+    "measured": true,
+    "method": "quantize",
+    "artifactPath": "/home/ubuntu/model_runs/uci_sms_real_run/student-int8",
+    "parameters": 3973888,
+    "modelSizeMb": 15.1591796875
+  },
+  "int8Benchmark": {
+    "modelPath": "/home/ubuntu/model_runs/uci_sms_real_run/student-int8",
+    "datasetPath": "/home/ubuntu/edge-ai-knowledge-distillation/api/data/sms_spam_uci.csv",
+    "parameters": 3973888,
+    "modelSizeMb": 15.1591796875,
+    "measured": true,
+    "sampleCount": 10,
+    "warmupIterations": 3,
+    "medianMs": 3.513123,
+    "p95Ms": 4.009476,
+    "minMs": 3.37936,
+    "maxMs": 4.009476,
+    "runtime": "cpu"
+  }
+}

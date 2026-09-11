@@ -1,0 +1,60 @@
+# Project TODO
+
+- [x] Establish the dark observability-console shell with responsive desktop rail and mobile navigation.
+- [x] Add runtime, API, model, and freshness status indicators.
+- [x] Add benchmark configuration controls with bounded token length and iteration count, defaults, reset, and methodology note.
+- [x] Add benchmark execution flow with explicit demo mode, loading, cancellation, error, and stale states.
+- [x] Add staggered result panels for latency, speedup, model-size/memory proxy, and confidence agreement.
+- [x] Add dual-path SMS prediction panel with label/confidence comparison and discrepancy warning.
+- [x] Add simulated presentation telemetry log with authoritative-metrics disclaimer.
+- [x] Add methodology experience and copyable run summary/JSON response.
+- [x] Add typed health, runtime, benchmark, and prediction contracts with demo-safe server behavior.
+- [x] Add Python/PyTorch benchmark API reference implementation and deployment integration guidance.
+- [x] Add Vitest coverage for benchmark validation and contract behavior.
+- [x] Write architecture, methodology, measurement explanation, limitations, local setup, Docker, Render, and Vercel documentation.
+- [x] Run typecheck, tests, and responsive visual verification.
+- [x] Implement benchmark failure, timeout, validation-error, backend-unavailable, and stale-result UI states in the run flow.
+- [x] Implement a dual-variant prediction disagreement state that preserves both outputs and shows a warning.
+- [x] Align Vercel installation with the repository pnpm lockfile and validate the production build.
+- [x] Review dependency audit findings and document safe remediation without forcing breaking upgrades.
+- [x] Audit live Vercel deployment, GitHub repository, and local project state against the expanded model-compression requirements.
+- [x] Create an external timestamped backup before major modifications.
+- [x] Rebuild truthful ML workflows for distillation, datasets, evaluation, quantization, pruning, exports, and benchmarking.
+- [x] Rebuild the frontend into a research-grade teacher/student compression platform with explicit measured/unmeasured states.
+- [x] Harden Vercel/Render architecture, deployment documentation, tests, and production build for the expanded platform.
+- [x] Verify live UI, responsive behavior, API contracts, and final deployment readiness.
+- [x] Replace the default teacher setup with a real finetuned SMS-spam teacher/student artifact workflow and document measured-run prerequisites.
+- [x] Wire dataset upload, distillation, evaluation, export, and comparison actions to real API requests instead of toast-only UI placeholders.
+- [x] Remove or reconcile the legacy demo tRPC benchmark stack so FastAPI is the single authoritative ML API.
+- [x] Add FastAPI route-level tests and a fixture-based end-to-end contract verification path.
+- [x] Wire frontend evaluation and comparison panels to real FastAPI responses and render measured/unmeasured states from returned data.
+- [x] Add controlled fixture-based API integration tests covering dataset inspect, distillation validation/run boundary, evaluation, benchmark, quantize/prune, and export error/success contracts.
+- [x] Add a reproducible Python test command and dependency setup so FastAPI tests execute rather than silently skipping in CI.
+- [x] Wire the remaining comparison table rows to returned evaluation and benchmark data.
+- [x] Add a repository test script/CI workflow that installs API dependencies and runs the FastAPI suite with no silent skip.
+- [x] Add non-skip FastAPI integration coverage using controlled dependency-injected fixtures for evaluate, benchmark, export, and optimization contracts.
+- [x] Expand and execute non-skipped FastAPI tests for benchmark success/unavailable, evaluate, quantize, prune, and both export routes.
+- [x] Add distillation-run boundary and mocked success contract tests.
+- [x] Add benchmark measured-success contract coverage alongside unavailable/error coverage.
+- [x] Add prune, TorchScript export, and explicit optimization/export error tests.
+- [x] Add FastAPI benchmark error-path tests for adapter/runtime exceptions in addition to measured-success and unavailable coverage.
+- [x] Add explicit optimization error tests for quantize/prune missing-artifact and adapter-failure responses.
+- [x] Audit all visible frontend copy against the existing page behavior and identify unclear or inconsistent wording.
+- [x] Refactor navigation, hero, model comparison, distillation controls, benchmark/results, prediction, methodology, and status copy into plain professional English.
+- [x] Add concise explanations for necessary technical terms and preserve explicit measured/unmeasured states.
+- [x] Verify copy consistency, accessibility, responsive presentation, and preserved AI/ML functionality.
+- [x] Scope the copy audit to the sections present in the current interface; no prediction panel is implemented in the current UI.
+- [x] Add concise inline explanations for Temperature, Alpha, F1 score, INT8, ONNX, and TorchScript.
+- [x] Audit the expanded internship-ready requirements against the current implementation, live deployment, and existing checkpoint.
+- [x] Add real evaluation summaries, confusion-matrix presentation, experiment history, and honest trade-off/Pareto empty states.
+- [x] Add validated learning-rate and batch-size controls, benchmark statistics, prediction playground, and clearly labeled edge profiles.
+- [x] Harden quantization/pruning/export disclosures and validate any newly exposed API contracts and tests.
+- [x] Verify responsive behavior, production build, reproducible real-run documentation, and save the upgrade checkpoint.
+- [x] Add a dedicated Pareto frontier panel with an honest empty state until enough measured experiments exist.
+- [x] Expose p95, repeated-run count, throughput availability, and runtime conditions from benchmark results in the UI.
+- [x] Update README with the internship-ready features, prediction route, experiment-history scope, and limitations, then verify and checkpoint.
+- [ ] Audit the deployed Vercel frontend, FastAPI service, API base URL, CORS, Vercel config, and direct production endpoint reachability.
+- [ ] Fix the actual API deployment/request-path root cause without mocking responses or hiding failures.
+- [ ] Add or verify distinct frontend states for API unavailable, model unavailable, invalid request, server error, timeout, and unsupported operation.
+- [ ] Verify direct health, metadata, prediction, benchmark, CORS, browser request flow, loading, timeout, and error behavior.
+- [ ] Document the actual production request path and save a verified deployment checkpoint.

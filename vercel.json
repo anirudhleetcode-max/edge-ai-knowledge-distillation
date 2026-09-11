@@ -1,0 +1,5 @@
+{
+  "installCommand": "corepack enable && corepack prepare pnpm@10.4.1 --activate && pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm run check && pnpm test && pnpm run build",
+  "framework": null
+}
